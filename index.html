@@ -1,380 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Hwimin Park's portfolio - Aspiring Data Scientist with a strong foundation in economics and data analysis, showcasing projects in predictive modeling and economic forecasting.">
-    <title>Hwimin Park | Aspiring Data Scientist</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-  </head>
-  <body>
-    <nav id="desktop-nav">
-      <div class="logo">Hwimin Park</div>
-      <div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Hwimin Park's portfolio - Master's in Data Science student at UBC Okanagan, specializing in predictive modeling, machine learning, and data engineering projects." />
+  <title>Hwimin Park | Data Scientist & Engineer Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <nav id="desktop-nav">
+    <div class="logo">Hwimin Park</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <nav id="hamburger-nav">
+    <div class="logo">Hwimin Park</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+  <section id="profile">
+    <div class="section__pic-container">
+      <img src="./assets/6X5A6334.png" alt="Hwimin Park profile picture" />
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title">Hwimin Park</h1>
+      <p class="section__text__p2">Aspiring Data Scientist & Engineer</p>
+      <div class="btn-container">
+        <!-- <button class="btn btn-color-2" onclick="window.open('./assets/Hwimin_Park_Resume.pdf')">
+          Download Resume
+        </button> -->
+        <button class="btn btn-color-1" onclick="location.href='./#contact'">
+          Contact Me
+        </button>
+      </div>
+      <div id="socials-container">
+        <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon" onclick="location.href='https://www.linkedin.com/in/hwimin-park/'" />
+        <img src="./assets/github.png" alt="My GitHub profile" class="icon" onclick="location.href='https://github.com/hwiminPark'" />
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <p class="section__text__p1">Get To Know More</p>
+    <h1 class="title">About Me</h1>
+    <div class="section-container">
+      <div class="section__pic-container">
+        <img src="./assets/about-pic.png" alt="Hwimin Park profile picture" class="about-pic" />
+      </div>
+      <div class="about-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <img src="./assets/education.png" alt="Education icon" class="icon" />
+            <h3>Education</h3>
+            <p>Master of Data Science, UBC (Expected 2026)<br />B.A. Economics, Minor in Data Science, UCalgary</p>
+          </div>
+        </div>
+        <div class="text-container">
+          <p style="margin-bottom: 20px;">
+            Aspiring Data Scientist pursuing a Master’s in Data Science at UBC, with a strong foundation in statistical modeling, machine learning, and data analysis from a BA in Economics and Data Science minor. Proficient in Python, SQL, and tools like Scikit-learn and Pandas, demonstrated through academic projects involving predictive modeling and data visualization. Eager to apply analytical skills to extract insights from complex datasets, contribute to team-driven projects, and grow in a collaborative environment focused on data-informed decision-making.
+          </p>
+          <p style="margin-bottom: 20px;">
+            <strong>Key Highlights:</strong>
+          </p>
+          <ul style="margin-bottom: 20px;">
+            <li><strong>Predictive Modeling:</strong> Achieved R² = 0.94 in bid-ask spread prediction using Random Forest on 650k+ rows of data.</li>
+            <li><strong>Econometric Analysis:</strong> Modeled residential water demand, quantifying price elasticity at -0.2.</li>
+            <li><strong>Health Insights:</strong> Improved claim prediction accuracy by 20% via feature engineering.</li>
+          </ul>
+          <p>
+            Currently building data engineering projects with Airflow and AWS to support scalable ML pipelines. Passionate about ethical data practices and innovative problem-solving.
+          </p>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#skills'" />
+  </section>
+  <section id="skills">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Skills & Certifications</h1>
+    <div class="skills-details-container">
+      <div class="details-container">
+        <h2 class="experience-sub-title">Technical Skills</h2>
+        <div class="article-container">
+          <article><i class="fas fa-code"></i> Python</article>
+          <article><i class="fas fa-database"></i> SQL</article>
+          <article><i class="fas fa-chart-bar"></i> Scikit-learn</article>
+          <article><i class="fas fa-table"></i> Pandas</article>
+          <article><i class="fas fa-stream"></i> Streamlit</article>
+          <article><i class="fas fa-cloud"></i> AWS</article>
+          <article><i class="fas fa-wind"></i> Apache Airflow</article>
+          <article><i class="fas fa-brain"></i> TensorFlow</article>
+          <article><i class="fas fa-chart-line"></i> Statsmodels</article>
+        </div>
+      </div>
+      <div class="details-container">
+        <h2 class="experience-sub-title">Certifications & Honors</h2>
+        <ul class="cert-list">
+          <li>DeepLearning.AI Data Engineering (AWS)</li>
+          <li>The Complete SQL Masterclass</li>
+          <li>Master of Data Science Domestic Scholarship (UBC)</li>
+          <li>President’s Admission Scholarship (UCalgary)</li>
+          <li>Louise McKinney Scholarship</li>
+          <li>Jason Lang Scholarship</li>
+          <li>Joyce Foundation Jack Perraton and Ed & Lois Marshall Bursary</li>
+        </ul>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
+  </section>
+  <section id="projects">
+    <p class="section__text__p1">Browse My Featured</p>
+    <h1 class="title">Projects</h1>
+    <div class="project-container color-container">
+      <div class="project-image">
+        <img src="./assets/0_N6CXz83s9RD4xlnK.png" alt="Project 1" class="project-img">
+      </div>
+      <div class="project-details">
+        <h2 class="experience-sub-title project-title">Predictive Modelling for Health Insurance Claims</h2>
+        <p>Applied regression analysis to predict health insurance claims by evaluating customer demographics and health factors.</p>
+        <div class="btn-container">
+          <button class="btn btn-color-2 project-btn" onclick="location.href='https://scribe.rip/@jazzed_olivine_llama_204/predictive-modelling-for-health-insurance-claims-910c7e99bfc5'">Write Up</button>
+          <button class="btn btn-color-2 project-btn" onclick="window.open('./assets/Health_Insurance_Claim.pdf')">Jupyter Notebook</button>
+          <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/hwiminPark/Health_Insurance_Claim'">Github</button>
+        </div>
+      </div>
+    </div>
+    <div class="project-container color-container">
+      <div class="project-image">
+        <img src="./assets/378656182-a9bf2ebd-b49d-4efe-bd47-155b1043d876.png" alt="Predicting Individual Savings" class="project-img">
+      </div>
+      <div class="project-details">
+        <h2 class="experience-sub-title project-title">Predicting Individual Savings</h2>
+        <p>Built a Random Forest model to predict savings potential, identifying key financial predictors and uncovering actionable savings patterns.</p>
+        <div class="btn-container">
+          <button class="btn btn-color-2 project-btn" onclick="location.href='https://docsify-this.net/?basePath=https://raw.githubusercontent.com/hwiminPark/Predict_Individual_Savings/main&homepage=write_up.md&sidebar=true&browser-tab-title=Predicting%20Individual%20Savings#/'">Write Up</button>
+          <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/hwiminPark/Predict_Individual_Savings'">Github</button>
+        </div>
+      </div>
+    </div>
+    <div class="project-container color-container">
+      <div class="project-image">
+        <img src="./assets/0__XV0IBVRobDZuHdi.jpg" alt="Project 3" class="project-img">
+      </div>
+      <div class="project-details">
+        <h2 class="experience-sub-title project-title">Predicting Credit Card Offer Acceptance</h2>
+        <p>Designed a predictive model to estimate the likelihood of customers accepting credit card offers based on their demographic and financial profiles.</p>
+        <div class="btn-container">
+          <button class="btn btn-color-2 project-btn" onclick="location.href='https://scribe.rip/@jazzed_olivine_llama_204/predicting-credit-card-offer-acceptance-a-data-science-approach-6b1b45b5da94'">Write Up</button>
+          <button class="btn btn-color-2 project-btn" onclick="window.open('./assets/Credit_Card_Acceptance.pdf')">Jupyter Notebook</button>
+          <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/hwiminPark/Credit_Card_Offer_Acceptance'">Github</button>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
+  </section>
+  <section id="contact">
+    <p class="section__text__p1">Get in Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <i class="fas fa-envelope contact-icon email-icon"></i>
+        <p><a href="mailto:hwimin.park@proton.me">Email</a></p>
+      </div>
+      <div class="contact-info-container">
+        <i class="fab fa-linkedin contact-icon"></i>
+        <p><a href="https://www.linkedin.com/in/hwimin-park/">LinkedIn</a></p>
+      </div>
+      <div class="contact-info-container">
+        <i class="fab fa-github contact-icon"></i>
+        <p><a href="https://github.com/hwiminPark">GitHub</a></p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <nav>
+      <div class="nav-links-container">
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
-          <!-- <li><a href="#experience">Experience</a></li> -->
+          <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
     </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Hwimin Park</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <!-- <li><a href="#experience" onclick="toggleMenu()">Experience</a></li> -->
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/profile-pic.png" alt="John Doe profile picture" />
-        <!-- include image -->
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Hwimin Park</h1>
-        <p class="section__text__p2">Economics Major with Data Science Focus</p>
-        <div class="btn-container">
-          <!-- <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/Cover Letter.pdf')"
-          >
-            Download Cover Letter
-          </button> -->
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/Hwimin_Park_CV.pdf')"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://linkedin.com/in/hwimin-park/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/hwiminPark'"
-          />
-        </div>
-      </div>
-    </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/about-pic.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <!-- <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>2+ years <br />Frontend Development</p>
-            </div> -->
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>B.A. Economics
-                <br />Data Science Minor
-              </p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p style="margin-bottom: 20px;">
-              As a data-driven Economics major with hands-on experience in predictive modeling, I thrive at the intersection of data science and economics. My academic journey has equipped me with a deep understanding of economic theories, complemented by practical skills in data analysis and econometric modeling.
-            </p>
-            <p style="margin-bottom: 20px;">
-              <strong>Key Highlights:</strong>
-            </p>
-            <ul style="margin-bottom: 20px;">
-              <li>
-                <strong>Predictive Modeling:</strong> Developed a Python-based predictive model to analyze health insurance claims, identifying 'smoking status' and 'age' as the most significant factors influencing claim amounts. This project demonstrated my ability to apply data science techniques to uncover key insights from complex datasets.
-              </li>
-              <li>
-                <strong>Data Science Tools:</strong> Gained proficiency in Python, SQL, and data visualization tools like Tableau through hands-on projects, enabling me to effectively analyze and interpret data to generate meaningful insights.
-              </li>
-            </ul>
-            <p>
-              I am passionate about leveraging data science to drive innovation and solve complex challenges. I look forward to applying my analytical skills to contribute to impactful projects in the field.
-            </p>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>
-    <!-- <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SASS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>TypeScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Material UI</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PostgreSQL</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Express JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section> -->
-    <section id="projects">
-      <p class="section__text__p1">Browse My Featured</p>
-      <h1 class="title">Projects</h1>
-      <div class="project-container color-container">
-        <div class="project-image">
-          <img src="./assets/0_N6CXz83s9RD4xlnK.png" alt="Project 1" class="project-img">
-        </div>
-        <div class="project-details">
-          <h2 class="experience-sub-title project-title">Predictive Modelling for Health Insurance Claims</h2>
-          <p>Applied regression analysis to predict health insurance claims by evaluating customer demographics and health factors.</p>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://scribe.rip/@jazzed_olivine_llama_204/predictive-modelling-for-health-insurance-claims-910c7e99bfc5'">Write Up</button>
-            <button class="btn btn-color-2 project-btn" onclick="window.open('./assets/Health_Insurance_Claim.pdf')">Jupyter Notebook</button>
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/hwiminPark/Health_Insurance_Claim'">Github</button>
-          </div>
-        </div>
-      </div>
-      <div class="project-container color-container">
-        <div class="project-image">
-          <img src="./assets/378656182-a9bf2ebd-b49d-4efe-bd47-155b1043d876.png" alt="Predicting Individual Savings" class="project-img">
-        </div>
-        <div class="project-details">
-          <h2 class="experience-sub-title project-title">Predicting Individual Savings</h2>
-          <p>Built a Random Forest model to predict savings potential, identifying key financial predictors and uncovering actionable savings patterns.</p>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://docsify-this.net/?basePath=https://raw.githubusercontent.com/hwiminPark/Predict_Individual_Savings/main&homepage=write_up.md&sidebar=true&browser-tab-title=Predicting%20Individual%20Savings#/'">Write Up</button>
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/hwiminPark/Predict_Individual_Savings'">Github</button>
-          </div>
-        </div>
-      </div>
-      <!-- <div class="project-container color-container">
-        <div class="project-image">
-          <img src="./assets/0_kc1PiYt99ziOMI8w.jpg" alt="Project 2" class="project-img">
-        </div>
-        <div class="project-details">
-          <h2 class="experience-sub-title project-title">Forecasting GDP Per Capita</h2>
-          <p>Developed a forecasting model to predict US GDP per capita using historical macroeconomic data.</p>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://scribe.rip/@jazzed_olivine_llama_204/forecasting-gdp-per-capita-a-data-science-journey-4e959d20d3cc'">Write Up</button>
-            <button class="btn btn-color-2 project-btn" onclick="window.open('./assets/Forecasting_GDP_Per_Capita_in_US.pdf')">Jupyter Notebook</button>
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/hwiminPark/Forecasting_GDP_Per_Capita_in_US'">Github</button>
-          </div>
-        </div>
-      </div> -->
-      <div class="project-container color-container">
-        <div class="project-image">
-          <img src="./assets/0__XV0IBVRobDZuHdi.jpg" alt="Project 3" class="project-img">
-        </div>
-        <div class="project-details">
-          <h2 class="experience-sub-title project-title">Predicting Credit Card Offer Acceptance</h2>
-          <p>Designed a predictive model to estimate the likelihood of customers accepting credit card offers based on their demographic and financial profiles.</p>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://scribe.rip/@jazzed_olivine_llama_204/predicting-credit-card-offer-acceptance-a-data-science-approach-6b1b45b5da94'">Write Up</button>
-            <button class="btn btn-color-2 project-btn" onclick="window.open('./assets/Credit_Card_Acceptance.pdf')">Jupyter Notebook</button>
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/hwiminPark/Credit_Card_Offer_Acceptance'">Github</button>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:examplemail@gmail.com">hwimin.park@proton.me</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com/in/hwimin-park/">LinkedIn</a></p>
-        </div>
-      </div>
-    </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <!-- <li><a href="#experience">Experience</a></li> -->
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      <p>Copyright &#169; 2024 Hwimin Park. All Rights Reserved.</p>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+    <p>Copyright &#169; 2026 Hwimin Park. All Rights Reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
 </html>
